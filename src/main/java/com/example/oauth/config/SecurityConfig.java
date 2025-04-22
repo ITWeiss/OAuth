@@ -39,8 +39,8 @@ public class SecurityConfig {
     config.setAllowedMethods(List.of("GET", "POST"));
     UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
     source.registerCorsConfiguration("/**", config);
-    config.setAllowCredentials(true); // обязательно при credentials: "include" на фронте
-    config.setAllowedHeaders(List.of("*")); // чтобы разрешить заголовки (например, Authorization);
+    config.setAllowCredentials(true);
+    config.setAllowedHeaders(List.of("*"));
     return source;
   }
 }
